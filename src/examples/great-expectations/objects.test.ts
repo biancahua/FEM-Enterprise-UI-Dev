@@ -1,5 +1,8 @@
 import { describe, expect, test } from 'vitest';
 
+// toBE: DEEPLY EQUAL (by reference)
+// toEQUAL: SHALLOWLY EQUAL (by value) 
+
 describe('toBe', () => {
   test.fails('objects should not be strictly equal', () => {
     expect({ a: 1 }).toBe({ a: 1 });
@@ -31,6 +34,7 @@ describe('toEqual', () => {
     expect([1, [2, 3]]).toEqual([1, [2, 3]]);
   });
 
+  // doesn't really happen in real life
   test('functions should to be strictly equal if compared by reference', () => {
     const fn = () => {};
     expect(fn).toBe(fn);
