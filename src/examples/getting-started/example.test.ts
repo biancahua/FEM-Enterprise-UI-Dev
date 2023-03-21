@@ -1,13 +1,15 @@
 import { it, expect, test } from 'vitest';
 
+// no difference between IT and TEST; they do the same thing
 it('should work', () => {
   expect(true).toBe(true);
 });
 
-test('works witn "test" as well', () => {
+test('works with "test" as well', () => {
   expect(false).not.toBe(true);
 });
 
+// can also test if a test FAILS; expect a failure 
 it.fails('should be able to expect a test to fail', () => {
   expect(false).toBe(true);
 });
